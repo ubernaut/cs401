@@ -1,3 +1,4 @@
+package project1;
 import java.util.TreeSet;
 import java.util.Scanner;
 

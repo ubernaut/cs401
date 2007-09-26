@@ -1,5 +1,7 @@
-import java.util.LinkedList;
 
+package project1;
+
+import java.util.LinkedList;
 public class BreadthFirst {
 	private slideBoard sState;
 	private slideBoard gState;
@@ -45,10 +47,11 @@ public class BreadthFirst {
 
 			while(true){
 				if(goalFound==true){System.out.println("goal reached with: "+nodesVisited+" nodes expanded.");return;}
-				if(!gState.checkEqual(currStates.peekFirst())){
+				if(!gState.checkEqual(currStates.peek())){
 					System.out.println("expanding node #"+nodesVisited+"\n");
-					currStates.peekFirst().printBoard();
-					expandNodes(currStates.pop());
+					currStates.peek().printBoard();
+					
+					expandNodes(currStates.getLast());
 					
 					nodesVisited++;}
 				else {

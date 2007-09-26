@@ -1,3 +1,4 @@
+package project1;
 
 import java.util.LinkedList;
 
@@ -57,7 +58,8 @@ public class itDeepSearch {
 				recursiveDLS(currStates.getFirst());
 				if (depth != cutoff)
 				{
-					currStates.peekFirst().printBoard();
+					currStates.peek().printBoard();
+					
 				}
 				if(goalFound==true)
 					{System.out.println("goal reached with: "+nodesVisited+" nodes expanded.");
@@ -74,9 +76,9 @@ public class itDeepSearch {
 					if(goalFound==true)
 						{System.out.println("goal reached with: "+nodesVisited+" nodes expanded.");
 						return;}
-					if(!gState.checkEqual(currStates.peekFirst())){
+					if(!gState.checkEqual(currStates.peek())){
 						System.out.println("expanding node #"+nodesVisited+"\n");
-						currStates.peekFirst().printBoard();
+						currStates.peek().printBoard();
 						expandNodes(currStates.pop());	
 						nodesVisited++;}
 					else {
@@ -101,7 +103,7 @@ public class itDeepSearch {
 			System.out.println("Cutoff limit reached.");
 		else{
 			System.out.println("expanding node #"+nodesVisited+"\n");
-			currStates.peekFirst().printBoard();
+			currStates.peek().printBoard();
 			System.out.println("");
 			expandNodes(inState, cutoffOccured);}
 		if(cutoffOccured)
