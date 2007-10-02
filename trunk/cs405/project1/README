@@ -1,0 +1,17 @@
+TestingGrounds.java contains the executable main sub-Routine. all instructions for use will be printed on the screen. 
+
+Files:
+	BreadthFirst.java -james & collin
+	itDeepSearch.java -james
+	slideBoard - james & collin
+	TestingGrounds - collin
+Issues: 	
+
+Breadth First works great when it doesn't run out of memory!
+
+itDeepSearch gets caught in a cycle;
+
+both A* functions calculate cost correctly.  the States are stored inside a TreeSet to ensure no duplicate states exist. SlideBoard implements the comparable function to facilitate this. when two states have an equal cost, it triggers a more rigourus analysis of the set to determine if they are the same State. 
+
+unfortunately, both A* functions get caught inside cycles fairly quickly. 
+
